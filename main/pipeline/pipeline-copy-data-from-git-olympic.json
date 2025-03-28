@@ -5,7 +5,16 @@
 			{
 				"name": "Activity-Copy data-from-http",
 				"type": "Copy",
-				"dependsOn": [],
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "Activity-Static-Copy-paramters",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -57,7 +66,7 @@
 				]
 			},
 			{
-				"name": "Activity-Static-Cvopy-Data",
+				"name": "Activity-Static-Copy-paramters",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
