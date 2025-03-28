@@ -5,8 +5,6 @@
 			{
 				"name": "Activity-Static-Copy-paramters",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -84,10 +82,13 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "ExcelSource",
+									"type": "DelimitedTextSource",
 									"storeSettings": {
 										"type": "HttpReadSettings",
 										"requestMethod": "GET"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
 									}
 								},
 								"sink": {
@@ -113,13 +114,9 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "property_source_olympic",
+									"referenceName": "DelimitedText2",
 									"type": "DatasetReference",
 									"parameters": {
-										"sheet_name": {
-											"value": "@item().sheet_name",
-											"type": "Expression"
-										},
 										"rel_url": {
 											"value": "@item().rel_URL",
 											"type": "Expression"
