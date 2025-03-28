@@ -5,6 +5,8 @@
 			{
 				"name": "Activity-Static-Copy-paramters",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -126,11 +128,11 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "dataset_destination",
+									"referenceName": "linked_service_csv_adls",
 									"type": "DatasetReference",
 									"parameters": {
 										"file_name": {
-											"value": "item().file_name",
+											"value": "@item().file_name",
 											"type": "Expression"
 										}
 									}
