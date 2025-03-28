@@ -1,0 +1,20 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linked_service_olympic_ADLSgen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "parameters.json",
+				"folderPath": "raw-data",
+				"fileSystem": "olympics"
+			}
+		},
+		"schema": {}
+	}
+}

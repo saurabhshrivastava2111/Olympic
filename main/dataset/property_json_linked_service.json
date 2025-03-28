@@ -1,0 +1,18 @@
+{
+	"name": "property_json_linked_service",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "json_linked_service",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "saurabhshrivastava2111/Olympic/refs/heads/main/parameters.json"
+			}
+		},
+		"schema": {}
+	}
+}
