@@ -1,0 +1,20 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "http_excel_linked_service",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Details",
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "saurabhshrivastava2111/Olympic/blob/main/Athletes.xlsx"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
