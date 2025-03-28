@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-olympics-analytics"
+		},
+		"http_excel_linked_service_password": {
+			"value": ""
+		},
+		"linked_service_olympic_ADLSgen2_accountKey": {
+			"value": ""
+		},
+		"http_excel_linked_service_properties_typeProperties_url": {
+			"value": "https://github.com/"
+		},
+		"http_excel_linked_service_properties_typeProperties_userName": {
+			"value": "saurabh.shrivastava2111@gmail.com"
+		},
+		"json_linked_service_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"linked_service_olympic_ADLSgen2_properties_typeProperties_url": {
+			"value": "https://storageaccountolypics.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
