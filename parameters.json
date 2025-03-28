@@ -1,0 +1,22 @@
+[
+    {
+        "file_name": "Athletes.xlsx",
+        "sheet_name": "Details"
+    },
+    {
+        "file_name": "Coaches.xlsx",
+        "sheet_name": "Details"
+    },
+    {
+        "file_name": "EntriesGender.xlsx",
+        "sheet_name": "Details"
+    },
+    {
+        "file_name": "Medals.xlsx",
+        "sheet_name": "Details"
+    },
+    {
+        "file_name": "Teams.xlsx",
+        "sheet_name": "Details"
+    }
+]
