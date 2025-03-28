@@ -1,27 +1,22 @@
 [
     {
-        "file_name": "Athletes.xlsx",
-        "sheet_name": "Details",
-        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Athletes.xlsx"
+        "file_name": "Athletes.csv",
+        "rel_URL": "saurabhshrivastava2111/Olympic/refs/heads/main/Athletes.csv"
     },
     {
-        "file_name": "Coaches.xlsx",
-        "sheet_name": "Details",
-        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Coaches.xlsx"
+        "file_name": "Coaches.csv",
+        "rel_URL": "saurabhshrivastava2111/Olympic/refs/heads/main/Coaches.csv"
     },
     {
-        "file_name": "EntriesGender.xlsx",
-        "sheet_name": "Details",
-        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/EntriesGender.xlsx"
+        "file_name": "EntriesGender.csv",
+        "rel_URL": "saurabhshrivastava2111/Olympic/refs/heads/main/EntriesGender.csv"
     },
     {
-        "file_name": "Medals.xlsx",
-        "sheet_name": "Details",
-        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Medals.xlsx"
+        "file_name": "Medals.csv",
+        "rel_URL": "saurabhshrivastava2111/Olympic/refs/heads/main/Medals.csv"
     },
     {
-        "file_name": "Teams.xlsx",
-        "sheet_name": "Details",
-        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Teams.xlsx"
+        "file_name": "Teams.csv",
+        "rel_URL": "saurabhshrivastava2111/Olympic/refs/heads/main/Teams.csv"
     }
 ]
