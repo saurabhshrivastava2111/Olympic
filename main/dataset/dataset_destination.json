@@ -1,0 +1,35 @@
+{
+	"name": "dataset_destination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linked_service_olympic_ADLSgen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"destination_olympic": {
+				"type": "String"
+			},
+			"file_name": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
+				"folderPath": "raw-data",
+				"fileSystem": "olympics"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
