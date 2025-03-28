@@ -1,22 +1,27 @@
 [
     {
         "file_name": "Athletes.xlsx",
-        "sheet_name": "Details"
+        "sheet_name": "Details",
+        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Athletes.xlsx"
     },
     {
         "file_name": "Coaches.xlsx",
-        "sheet_name": "Details"
+        "sheet_name": "Details",
+        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Coaches.xlsx"
     },
     {
         "file_name": "EntriesGender.xlsx",
-        "sheet_name": "Details"
+        "sheet_name": "Details",
+        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/EntriesGender.xlsx"
     },
     {
         "file_name": "Medals.xlsx",
-        "sheet_name": "Details"
+        "sheet_name": "Details",
+        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Medals.xlsx"
     },
     {
         "file_name": "Teams.xlsx",
-        "sheet_name": "Details"
+        "sheet_name": "Details",
+        "rel_URL": "saurabhshrivastava2111/Olympic/blob/main/Teams.xlsx"
     }
 ]
