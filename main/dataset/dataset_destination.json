@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"destination_olympic": {
-				"type": "String"
-			},
 			"file_name": {
 				"type": "String"
 			}
