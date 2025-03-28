@@ -26,7 +26,8 @@
 					"value": "@dataset().rel_url",
 					"type": "Expression"
 				}
-			}
+			},
+			"firstRowAsHeader": true
 		},
 		"schema": []
 	}
