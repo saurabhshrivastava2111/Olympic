@@ -5,6 +5,8 @@
 			{
 				"name": "Activity-Static-Copy-paramters",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -50,11 +52,23 @@
 				]
 			},
 			{
-				"name": "ForEach1",
+				"name": "Activity-For-each-for-loading-all-excel-files",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Activity-look-up-parameters",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Activity-look-up-parameters').output.value",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Activity-Copy data-from-http",
@@ -100,17 +114,71 @@
 							"inputs": [
 								{
 									"referenceName": "property_source_olympic",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"sheet_name": {
+											"value": "@item().sheet_name",
+											"type": "Expression"
+										},
+										"rel_url": {
+											"value": "@item().rel_URL",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "dataset_destination",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_name": {
+											"value": "item().file_name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
 					]
+				}
+			},
+			{
+				"name": "Activity-look-up-parameters",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Activity-Static-Copy-paramters",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "source_dataset",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
