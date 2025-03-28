@@ -1,0 +1,9 @@
+{
+	"name": "adf-olympics-analytics",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a611b12f-b3a3-4042-aaf1-6599aeb8c9df",
+		"tenantId": "dd830c86-78d6-4c0d-8124-fa9c4607d538"
+	}
+}
